@@ -1,0 +1,2 @@
+selenium==4.0.0
+google-cloud-bigquery==2.29.0
