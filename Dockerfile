@@ -6,7 +6,7 @@ WORKDIR /usr/bin
 
 RUN apt-get update && \ 
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    apt install -y ./google-chrome-stable_current_amd64. && \
+    apt install -y ./google-chrome-stable_current_amd64.deb && \
     wget https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_linux64.zip && \
     unzip chromedriver_linux64.zip
 
