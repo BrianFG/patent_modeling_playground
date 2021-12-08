@@ -1,0 +1,62 @@
+version: '3'
+x-patents-common:
+  &patents-common
+  build: ./
+  volumes:
+    - ./src:/home/patents/src:ro
+
+services:
+  patents_server_a:
+    <<: *patents-common
+    ports:
+      - 8881:8888
+    restart: always
+    environment:
+    - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_a
+    volumes:
+      - ./src:/home/patents/src:ro
+      - ./workspaces/a:/home/patents/my_workspace
+
+  patents_server_b:
+    <<: *patents-common
+    ports:
+      - 8882:8888
+    restart: always
+    environment:
+    - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_b
+    volumes:
+      - ./src:/home/patents/src:ro
+      - ./workspaces/b:/home/patents/my_workspace
+
+  patents_server_c:
+    <<: *patents-common
+    ports:
+      - 8883:8888
+    restart: always
+    environment:
+    - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_c
+    volumes:
+      - ./src:/home/patents/src:ro
+      - ./workspaces/c:/home/patents/my_workspace
+
+  patents_server_d:
+    <<: *patents-common
+    ports:
+      - 8884:8888
+    restart: always
+    environment:
+    - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_d
+    volumes:
+      - ./src:/home/patents/src:ro
+      - ./workspaces/d:/home/patents/my_workspace
+
+  patents_server_e:
+    <<: *patents-common
+    ports:
+      - 8885:8888
+    restart: always
+    environment:
+    - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_e
+    volumes:
+      - ./src:/home/patents/src:ro
+      - ./workspaces/e:/home/patents/my_workspace
