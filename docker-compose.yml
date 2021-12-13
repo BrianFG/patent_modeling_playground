@@ -15,7 +15,7 @@ services:
     environment:
     - JUPYTER_TOKEN=${JUPYTER_PASSWORD}_master
     volumes:
-      - ./src:/home/patents/src:ro
+      - ./src:/home/patents/src
       - ./workspaces:/home/patents/students_works
 
   patents_server_a:
